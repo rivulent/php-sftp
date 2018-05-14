@@ -36,7 +36,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("SFtp::login : " . $e->getMessage());
+            throw new \Exception("SFtp::login : " . $e->getMessage());
         }
 
         return $sftp;
