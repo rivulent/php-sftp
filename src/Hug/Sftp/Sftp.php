@@ -90,7 +90,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::is_file : " . $e->getMessage());
+	        throw new \Exception("Sftp::is_file : " . $e->getMessage());
 	    }
 
 	    return $is_file;
@@ -127,7 +127,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sft::delete : " . $e->getMessage());
+            throw new \Exception("Sft::delete : " . $e->getMessage());
         }
 
         return $deleted;
@@ -177,7 +177,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sftp::rmdir : " . $e->getMessage());
+            throw new \Exception("Sftp::rmdir : " . $e->getMessage());
         }
 
         return $deleted;
@@ -278,7 +278,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::upload_dir : " . $e->getMessage());
+	        throw new \Exception("Sftp::upload_dir : " . $e->getMessage());
 	    }
 
 	    return $uploaded;
@@ -352,7 +352,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::upload_all : " . $e->getMessage());
+	        throw new \Exception("Sftp::upload_all : " . $e->getMessage());
 	    }
 
 	    return $uploaded_all;
@@ -388,7 +388,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sftp::download : " . $e->getMessage());
+            throw new \Exception("Sftp::download : " . $e->getMessage());
         }
 
         return $downloaded;
@@ -442,7 +442,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sftp::download_dir : " . $e->getMessage());
+            throw new \Exception("Sftp::download_dir : " . $e->getMessage());
         }
 
         return $downloaded;
@@ -517,7 +517,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sftp::download_all : " . $e->getMessage());
+            throw new \Exception("Sftp::download_all : " . $e->getMessage());
         }
 
         return $download_all;
@@ -552,7 +552,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::rename : " . $e->getMessage());
+	        throw new \Exception("Sftp::rename : " . $e->getMessage());
 	    }
 
 	    return $renamed;
@@ -586,7 +586,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::mkdir : " . $e->getMessage());
+	        throw new \Exception("Sftp::mkdir : " . $e->getMessage());
 	    }
 
 	    return $created;
@@ -625,7 +625,7 @@ class Sftp
         }
         catch(Exception $e)
         {
-            error_log("Sftp::touch : " . $e->getMessage());
+            throw new \Exception("Sftp::touch : " . $e->getMessage());
         }
 
         return $created;
@@ -660,7 +660,7 @@ class Sftp
 	    }
 	    catch(Exception $e)
 	    {
-	        error_log("Sftp::upload : " . $e->getMessage());
+	        throw new \Exception("Sftp::upload : " . $e->getMessage());
 	    }
 
 	    return $uploaded;
